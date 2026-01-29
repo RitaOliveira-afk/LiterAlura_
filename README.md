@@ -50,6 +50,6 @@
 <h2></h2>
 
 <p align="center" >  
- Projeto desenvolvido para fins educacionais por Rita.
-  2026
+ Projeto desenvolvido para fins educacionais por Rita
 </p>
+  <p align="center" > 2026</p>
