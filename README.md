@@ -7,7 +7,7 @@
 <h2>Challenge</h2>
 
   <p>
-    Desafio LiterAlura é um projeto onde é possível realizar consultas de livros e dados de autores, por meio de consumo de <strong>API</strong> e conexão a um <strong>banco de dados</strong> relacional.
+    Desafio LiterAlura é um projeto onde é possível realizar consultas de livros e dados de autores, por meio de consumo de <strong>API</strong> e conexão a um <strong>Banco de Dados</strong> relacional.
     Esse projeto faz parte da formação em java do programa ONE com a Alura + Oracle.
   </p>
   
