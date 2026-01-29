@@ -30,13 +30,13 @@
 <h2>Tecnologias utilizadas</h2>
 <ul>
   <li>Java</li>
-    Spring Boot
-    Spring Data JPA
-    Hibernate
-    PostgreSQL
-    Maven
-    API Gutendex
-    Git e GitHub</li>
+  <li> Spring Boot</li>
+  <li>Spring Data JPA</li>
+  <li>Hibernate</li>
+  <li>PostgreSQL</li>
+  <li> Maven</li>
+  <li>API Gutendex</li>
+  
   
 
 </ul>
