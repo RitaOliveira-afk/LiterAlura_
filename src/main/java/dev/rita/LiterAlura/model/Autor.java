@@ -1,0 +1,79 @@
+package dev.rita.LiterAlura.model;
+import dev.rita.LiterAlura.dto.AutorDto;
+import jakarta.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Table(name = "autores")
+public class Autor {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+   @Column(unique = true)
+    private String nome;
+
+    private Integer anoNascimento;
+    private Integer anoFalecimento;
+
+    @OneToMany (mappedBy = "autor", cascade = CascadeType.ALL)
+    private List <Livros> livros = new ArrayList<>();
+
+    public Autor(){}
+
+    public Autor(AutorDto autorDto){
+        this.nome = autorDto.nome();
+        this.anoNascimento = autorDto.anoNascimento();
+        this.anoFalecimento = autorDto.anoFalecimento();
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Integer getAnoNascimento() {
+        return anoNascimento;
+    }
+
+    public void setAnoNascimento(Integer anoNascimento) {
+        this.anoNascimento = anoNascimento;
+    }
+
+    public Integer getAnoFalecimento() {
+        return anoFalecimento;
+    }
+
+    public void setAnoFalecimento(Integer anoFalecimento) {
+        this.anoFalecimento = anoFalecimento;
+    }
+
+    public List<Livros> getLivros() {
+        return livros;
+    }
+
+    public void setLivros(List<Livros> livros) {
+        livros.forEach(livro -> livro.setAutor(this));
+        this.livros = livros;
+    }
+
+    @Override
+    public String toString() {
+        return "Autor{" +
+                "id=" + id +
+                ", Nome= '" + nome + '\'' +
+                ", Ano de Nascimento= " + anoNascimento +
+                ", Ano de Falecimento= " + anoFalecimento +
+                '}';
+    }
+}
+
